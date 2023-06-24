@@ -1,7 +1,7 @@
 from tkinter import *
+from tkinter import messagebox
 import random
 import pyperclip
-import messagebox
 
 # ---------------------------- CHARACTERS ------------------------------- #
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
@@ -48,7 +48,7 @@ def savePassword():
                                                     f"\n{username}\n{password}")
         if isOkToSave and filled:
             with open("data.txt", "a") as data_file:
-                data_file.write(f"\n{website} | {username} | {password}")
+                data_file.write(f"{website} | {username} | {password}\n")
                 webSiteEntry.delete(0, END)
                 passwordEntry.delete(0, END)
 
